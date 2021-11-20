@@ -1,7 +1,5 @@
-package com.codegym.task.task27.task2712;
+package main;
 
-
-import com.codegym.task.task27.task2712.kitchen.Order;
 
 public class Restaurant {
     public static void main(String[] args) {

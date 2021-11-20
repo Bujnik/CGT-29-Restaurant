@@ -1,7 +1,7 @@
-package com.codegym.task.task27.task2712.kitchen;
+package main.kitchen;
 
-import com.codegym.task.task27.task2712.ConsoleHelper;
-import com.codegym.task.task27.task2712.Tablet;
+import main.ConsoleHelper;
+import main.Tablet;
 
 import java.io.IOException;
 import java.util.List;

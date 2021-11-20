@@ -1,4 +1,4 @@
-package com.codegym.task.task27.task2712.kitchen;
+package main.kitchen;
 
 public enum Dish {
     Fish,
