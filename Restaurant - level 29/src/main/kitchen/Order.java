@@ -21,6 +21,6 @@ public class Order {
         StringBuilder sb = new StringBuilder("Your order: [");
         for (Dish dish : dishes) sb.append(dish).append(", ");
         sb.replace(sb.lastIndexOf(","),sb.length()+1,"").append("]");
-        return sb.toString() + "from " + tablet.toString();
+        return sb.toString() + " from " + tablet.toString();
     }
 }
