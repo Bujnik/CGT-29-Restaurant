@@ -1,5 +1,6 @@
 package main;
 
+import main.ad.AdvertisementManager;
 import main.kitchen.Order;
 
 import java.io.IOException;
@@ -34,6 +35,7 @@ public class Tablet extends Observable {
                 //Order is sent to the Cook only if contains dishes
                 setChanged();
                 notifyObservers(order);
+                new AdvertisementManager(order.getTotalCookingTime() * 60).processVideos();
             }
             return order;
         } catch (IOException e) {
