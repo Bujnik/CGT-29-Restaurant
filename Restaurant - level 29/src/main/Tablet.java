@@ -30,8 +30,11 @@ public class Tablet extends Observable {
                 3. Observer can proceed with update() method by receiving current status
 
             */
-            setChanged();
-            notifyObservers(order);
+            if (!order.isEmpty()){
+                //Order is sent to the Cook only if contains dishes
+                setChanged();
+                notifyObservers(order);
+            }
             return order;
         } catch (IOException e) {
             logger.log(Level.SEVERE, "The console is unavailable.");
