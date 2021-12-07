@@ -28,4 +28,10 @@ public class Advertisement {
     public long getAmountPerImpression() {
         return amountPerImpression;
     }
+
+    public void revalidate() {
+        //Number of impressions must be positive
+        if (impressionsRemaining <= 0) throw new UnsupportedOperationException();
+        else impressionsRemaining--;
+    }
 }

@@ -1,6 +1,7 @@
 package main;
 
 import main.ad.AdvertisementManager;
+import main.ad.NoVideoAvailableException;
 import main.kitchen.Order;
 
 import java.io.IOException;
@@ -35,7 +36,12 @@ public class Tablet extends Observable {
                 //Order is sent to the Cook only if contains dishes
                 setChanged();
                 notifyObservers(order);
-                new AdvertisementManager(order.getTotalCookingTime() * 60).processVideos();
+                try {
+                    //If there is nothing on the playlist, exception will be thrown, we have to inform the manager.
+                    new AdvertisementManager(order.getTotalCookingTime() * 60).processVideos();
+                } catch (NoVideoAvailableException e) {
+                    logger.log(Level.INFO, "No video is available for the following order: " + order);
+                }
             }
             return order;
         } catch (IOException e) {
