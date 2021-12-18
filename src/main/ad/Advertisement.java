@@ -14,7 +14,12 @@ public class Advertisement {
         this.amountPaid = amountPaid;
         this.impressionsRemaining = impressionsRemaining;
         this.duration = duration;
-        this.amountPerImpression = amountPaid / impressionsRemaining;
+        if (duration == 0) this.duration = -1;
+        if (impressionsRemaining == 0) {
+            this.amountPerImpression = 0;
+            this.duration = -1;
+        }
+        else this.amountPerImpression = amountPaid / impressionsRemaining;
     }
 
     public String getName() {
@@ -27,6 +32,10 @@ public class Advertisement {
 
     public long getAmountPerImpression() {
         return amountPerImpression;
+    }
+
+    public int getImpressionsRemaining() {
+        return impressionsRemaining;
     }
 
     public void revalidate() {

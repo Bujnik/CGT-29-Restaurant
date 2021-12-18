@@ -26,7 +26,7 @@ public class ConsoleHelper {
         String s = "";
         while (true){
             s = readString();
-            if (!s.equals("exit") && !Dish.allDishesToString().contains(s)) {
+            if ((!s.equals("exit") && !Dish.allDishesToString().contains(s)) || s.equals("")) {
                 writeMessage("There is no such dish. Try again.");
                 continue;
             }

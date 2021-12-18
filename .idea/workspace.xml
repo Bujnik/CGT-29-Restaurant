@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58e58a32-17aa-486c-9b58-7406e45649eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/ad/NoVideoAvailableException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Tablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Tablet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ConsoleHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ConsoleHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ad/Advertisement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ad/Advertisement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ad/AdvertisementManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ad/AdvertisementManager.java" afterDir="false" />
     </list>
@@ -48,19 +46,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="CGT-29-Restaurant" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="CGT-29-Restaurant" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
