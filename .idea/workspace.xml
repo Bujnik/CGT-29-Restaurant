@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="58e58a32-17aa-486c-9b58-7406e45649eb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Restaurant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Restaurant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ManagerTablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ManagerTablet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/statistics/StatisticsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/statistics/StatisticsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/statistics/event/EventDataRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/statistics/event/EventDataRow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/statistics/event/NoVideosAvailableEventDataRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/statistics/event/NoVideosAvailableEventDataRow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/statistics/event/OrderReadyEventDataRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/statistics/event/OrderReadyEventDataRow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/statistics/event/VideosSelectedEventDataRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/statistics/event/VideosSelectedEventDataRow.java" afterDir="false" />
     </list>
