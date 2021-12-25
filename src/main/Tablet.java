@@ -3,6 +3,7 @@ package main;
 import main.ad.AdvertisementManager;
 import main.ad.NoVideoAvailableException;
 import main.kitchen.Order;
+import main.kitchen.TestOrder;
 
 import java.io.IOException;
 import java.util.Observable;
@@ -32,21 +33,36 @@ public class Tablet extends Observable {
                 3. Observer can proceed with update() method by receiving current status
 
             */
-            if (!order.isEmpty()){
-                //Order is sent to the Cook only if contains dishes
-                setChanged();
-                notifyObservers(order);
-                try {
-                    //If there is nothing on the playlist, exception will be thrown, we have to inform the manager.
-                    new AdvertisementManager(order.getTotalCookingTime() * 60).processVideos();
-                } catch (NoVideoAvailableException e) {
-                    logger.log(Level.INFO, "No video is available for the following order: " + order);
-                }
-            }
+            processOrder(order);
             return order;
         } catch (IOException e) {
             logger.log(Level.SEVERE, "The console is unavailable.");
             return null;
+        }
+    }
+
+    public void createTestOrder() {
+        try {
+            //Logic is the same as regular Order
+            Order order = new TestOrder(this);
+            processOrder(order);
+
+        } catch (IOException e) {
+            logger.log(Level.SEVERE, "The console is unavailable.");
+        }
+    }
+
+    private void processOrder(Order order) {
+        if (!order.isEmpty()) {
+            //Order is sent to the Cook only if contains dishes
+            setChanged();
+            notifyObservers(order);
+            try {
+                //If there is nothing on the playlist, exception will be thrown, we have to inform the manager.
+                new AdvertisementManager(order.getTotalCookingTime() * 60).processVideos();
+            } catch (NoVideoAvailableException e) {
+                logger.log(Level.INFO, "No video is available for the following order: " + order);
+            }
         }
     }
 }
