@@ -1,9 +1,12 @@
 package main;
 
+import main.ad.Advertisement;
+import main.ad.StatisticsAdvertisementManager;
 import main.statistics.StatisticsManager;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
@@ -32,7 +35,15 @@ public class ManagerTablet {
         }
     }
     public void printActiveVideoSet(){
+        List<Advertisement> list = StatisticsAdvertisementManager.getInstance().getVideoSets(true);
+        for (Advertisement ad : list){
+            ConsoleHelper.writeMessage(String.format("%s - %d", ad.getName(), ad.getImpressionsRemaining()));
+        }
     }
     public void printArchivedVideoSet(){
+        List<Advertisement> list = StatisticsAdvertisementManager.getInstance().getVideoSets(false);
+        for (Advertisement ad : list){
+            ConsoleHelper.writeMessage(String.format("%s", ad.getName()));
+        }
     }
 }

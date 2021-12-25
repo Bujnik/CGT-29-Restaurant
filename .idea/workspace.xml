@@ -4,9 +4,7 @@
     <list default="true" id="58e58a32-17aa-486c-9b58-7406e45649eb" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/ManagerTablet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ManagerTablet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/statistics/StatisticsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/statistics/StatisticsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/statistics/event/OrderReadyEventDataRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/statistics/event/OrderReadyEventDataRow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/statistics/event/VideosSelectedEventDataRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/statistics/event/VideosSelectedEventDataRow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/ad/StatisticsAdvertisementManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ad/StatisticsAdvertisementManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
