@@ -1,6 +1,8 @@
 package main.ad;
 
 import main.ConsoleHelper;
+import main.statistics.StatisticsManager;
+import main.statistics.event.VideosSelectedEventDataRow;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -13,6 +15,8 @@ public class AdvertisementManager {
     private int timeSeconds;
     //targetList is our list of videos to be shown. setVideos method calls to this variable
     private List<Advertisement> targetList = new ArrayList<>();
+    private long targetListAmount = 0;
+    private int targetListDuration = 0;
 
     public AdvertisementManager(int timeSeconds) {
         this.timeSeconds = timeSeconds;
@@ -30,6 +34,16 @@ public class AdvertisementManager {
 
         setVideos(fitList, new ArrayList<>(), timeSeconds);
         if (targetList.isEmpty()) throw new NoVideoAvailableException();
+
+        //We calculate $$ amount and duration, needed to record an event
+        for (Advertisement ad : targetList) {
+            targetListAmount += ad.getAmountPerImpression();
+            targetListDuration += ad.getDuration();
+        }
+
+        StatisticsManager.getInstance().record(
+                new VideosSelectedEventDataRow(targetList, targetListAmount, targetListDuration));
+
 
         //Requirements of task stated that we have to display Ad name, amount per impression and amount per impression, per second.
         //In my opinion, the best revenue would be not when we add most amount by impression videos, but when we add videos that have most amount of money per second.

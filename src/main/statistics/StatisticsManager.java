@@ -25,7 +25,7 @@ public class StatisticsManager {
     }
 
     public void record (EventDataRow data) {
-
+        statisticsStorage.put(data);
     }
 
     private class StatisticsStorage {
@@ -36,6 +36,11 @@ public class StatisticsManager {
             for (EventType event : EventType.values()) {
                 storage.put(event, new ArrayList<>());
             }
+        }
+
+        //We add our events to given list, by EventType
+        private void put (EventDataRow data){
+            storage.get(data.getType()).add(data);
         }
     }
 

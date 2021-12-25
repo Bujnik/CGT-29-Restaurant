@@ -33,4 +33,8 @@ public class Order {
         sb.replace(sb.lastIndexOf(","),sb.length()+1,"").append("]");
         return sb.toString() + " from " + tablet.toString();
     }
+
+    public List<Dish> getDishes() {
+        return dishes;
+    }
 }
