@@ -41,4 +41,8 @@ public class Order {
     public List<Dish> getDishes() {
         return dishes;
     }
+
+    public Tablet getTablet() {
+        return tablet;
+    }
 }

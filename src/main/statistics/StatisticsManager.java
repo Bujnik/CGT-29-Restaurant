@@ -17,6 +17,10 @@ public class StatisticsManager {
 
     private StatisticsManager(){}
 
+    public Set<Cook> getCooks() {
+        return cooks;
+    }
+
     public static StatisticsManager getInstance(){
         if (instance == null) {
             instance = new StatisticsManager();

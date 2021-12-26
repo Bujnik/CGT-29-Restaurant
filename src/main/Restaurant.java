@@ -26,11 +26,11 @@ public class Restaurant {
         StatisticsManager.getInstance().register(amigoCook);
         StatisticsManager.getInstance().register(professorCook);
 
+        OrderManager orderManager = new OrderManager();
         List<Tablet> tablets = new ArrayList<>();
         for (int i = 1; i <= 5; i++) {
             Tablet tablet = new Tablet(i);
-            tablet.addObserver(amigoCook);
-            tablet.addObserver(professorCook);
+            tablet.addObserver(orderManager);
             tablets.add(tablet);
         }
 
