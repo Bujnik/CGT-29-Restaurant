@@ -15,11 +15,8 @@ public class StatisticsManager {
     private StatisticsStorage statisticsStorage = new StatisticsStorage();
     private Set<Cook> cooks = new HashSet<>();
 
-    private StatisticsManager(){
-        //We populate cooks with our first cook, called Amigo
-        cooks.add(new Cook("Amigo"));
+    private StatisticsManager(){}
 
-    }
     public static StatisticsManager getInstance(){
         if (instance == null) {
             instance = new StatisticsManager();

@@ -7,19 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RandomOrderGeneratorTask implements Runnable{
-    private List<Tablet> tablets = new ArrayList<>();
-    {
-        tablets.add(new Tablet(1));
-        tablets.add(new Tablet(2));
-        tablets.add(new Tablet(3));
-        tablets.add(new Tablet(4));
-    }
-    private Cook cook;
+    private List<Tablet> tablets;
     private int interval;
 
-    public RandomOrderGeneratorTask(int interval, Cook cook){
+    public RandomOrderGeneratorTask(List<Tablet> tablets, int interval){
         this.interval = interval;
-        this.cook = cook;
+        this.tablets = tablets;
     }
 
     @Override
@@ -28,9 +21,6 @@ public class RandomOrderGeneratorTask implements Runnable{
         try {
             while (true) {
                 Tablet tablet = tablets.get((int) (Math.random() * tablets.size() - 1));
-                Waiter waiter = new Waiter();
-                cook.addObserver(waiter);
-                tablet.addObserver(cook);
                 tablet.createTestOrder();
                 Thread.sleep(interval);
             }
