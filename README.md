@@ -22,8 +22,8 @@ Features:
 - Display the statistics to the manager.
 
 __________________________________________________________
-Task completed. My takeaways:
--> Practice with data structures (mostly Map, TreeMap)
--> Producer-Consumer pattern
--> Working with threads, problem solving when making a class being Runnable
+Task completed. My takeaways:<br>
+-> Practice with data structures (mostly Map, TreeMap)<br>
+-> Producer-Consumer pattern<br>
+-> Working with threads, problem solving when making a class being Runnable<br>
 -> Recursion
