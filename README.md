@@ -20,3 +20,10 @@ Features:
 <b>Third:</b>
 - Calculate the statistics;
 - Display the statistics to the manager.
+
+__________________________________________________________
+Task completed. My takeaways:<br>
+-> Practice with data structures (mostly Map, TreeMap)<br>
+-> Producer-Consumer pattern<br>
+-> Working with threads, problem solving when making a class being Runnable<br>
+-> Recursion
